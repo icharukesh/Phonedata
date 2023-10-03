@@ -53,12 +53,12 @@ from streamlit_extras.add_vertical_space import add_vertical_space
 
 if SELECT == "Home":
     col1,col2, = st.columns(2)
-    col1.image(Image.open("C:\\Users\\arunk\\OneDrive\\Desktop\\Phonepe_image2.png"),width = 300)
+    col1.image(Image.open("C:\\Users\\icharukesh\\OneDrive\\Desktop\\Phonepe_image2.png"),width = 300)
     with col1:
         st.subheader("PhonePe  is an Indian digital payments and financial technology company headquartered in Bengaluru, Karnataka, India. PhonePe was founded in December 2015, by Sameer Nigam, Rahul Chari and Burzin Engineer. The PhonePe app, based on the Unified Payments Interface (UPI), went live in August 2016. It is owned by Flipkart, a subsidiary of Walmart.")
         st.download_button("DOWNLOAD THE APP NOW", "https://www.phonepe.com/app-download/")
     with col2:
-        st.video("C:\\Users\\arunk\\OneDrive\\Desktop\\upi.mp4")
+        st.video("C:\\Users\\icharukesh\\OneDrive\\Desktop\\upi.mp4")
 
 
 
@@ -187,7 +187,7 @@ if SELECT == "Explore Data":
             st.markdown("## :violet[Overall State Data - Transactions Amount]")
             cursor.execute(f"select state, sum(count) as Total_Transactions, sum(amount) as Total_amount from map_trans where year = {Year} and quarter = {Quarter} group by state order by state")
             df1 = pd.DataFrame(cursor.fetchall(),columns= ['State', 'Total_Transactions', 'Total_amount'])
-            df2 = pd.read_csv(r"C:\\Users\\arunk\\OneDrive\\Desktop\\Statenames.csv")
+            df2 = pd.read_csv(r"C:\\Users\\icharukesh\\OneDrive\\Desktop\\Statenames.csv")
             df1.State = df2
 
             fig = px.choropleth(df1,geojson="https://gist.githubusercontent.com/jbrobst/56c13bbbf9d97d187fea01ca62ea5112/raw/e388c4cae20aa53cb5090210a42ebb9b765c0a36/india_states.geojson",
@@ -301,9 +301,9 @@ if SELECT == "Explore Data":
 if SELECT == "About":
     col1,col2 = st.columns(2)
     with col1:
-        st.video("C:\\Users\\arunk\\OneDrive\\Desktop\\pulse-video.mp4")
+        st.video("C:\\Users\\icharukesh\\OneDrive\\Desktop\\pulse-video.mp4")
     with col2:
-        st.image(Image.open("C:\\Users\\arunk\\OneDrive\\Desktop\\Phonepe_image2.png"),width = 500)
+        st.image(Image.open("C:\\Users\\icharukesh\\OneDrive\\Desktop\\Phonepe_image2.png"),width = 500)
         st.write("---")
         st.subheader("The Indian digital payments story has truly captured the world's imagination."
                  " From the largest towns to the remotest villages, there is a payments revolution being driven by the penetration of mobile phones, mobile internet and states-of-the-art payments infrastructure built as Public Goods championed by the central bank and the government."
@@ -320,7 +320,7 @@ if SELECT == "About":
             data = f.read()
         st.download_button("DOWNLOAD REPORT",data,file_name="annual report.pdf")
     with col2:
-        st.image(Image.open("C:\\Users\\arunk\\OneDrive\\Desktop\\about_phonepe1.png"),width = 800)
+        st.image(Image.open("C:\\Users\\icharukesh\\OneDrive\\Desktop\\about_phonepe1.png"),width = 800)
 
 
 #----------------------Contact---------------#
@@ -329,16 +329,16 @@ if SELECT == "About":
 
 
 if SELECT == "Contact":
-    Name = (f'{"Name :"}  {"ARUNKUMAR_BAIRAVAN"}')
-    mail = (f'{"Mail :"}  {"Arunkumarbairavan@gmail.com"}')
+    Name = (f'{"Name :"}  {"icharukesh"}')
+    mail = (f'{"Mail :"}  {"icharukesh@gmail.com"}')
     description = "An Aspiring DATA-SCIENTIST..!"
     social_media = {
         "Youtube": "https://youtu.be/zSHhbbkMGVM",
-        "GITHUB": "https://github.com/ArunkumarBairavan/GUVI-CAPSTONE-PROJECTS",
-        "LINKEDIN": "https://www.linkedin.com/in/arunkumar-bairavan-434864196/"}
+        "GITHUB": "https://github.com/icharukesh/GUVI-CAPSTONE-PROJECTS",
+        "LINKEDIN": "https://www.linkedin.com/in/icharkesh-434864196/"}
     
     col1, col2, col3 = st.columns(3)
-    col3.image(Image.open("C:\\Users\\arunk\\OneDrive\\Desktop\\Arunkumar.png.jpg"), width=300)
+    col3.image(Image.open("C:\\Users\\arunk\\OneDrive\\Desktop\\icharukesh.png.jpg"), width=300)
     st.subheader(Name)
     st.subheader(mail)
     with col2:
