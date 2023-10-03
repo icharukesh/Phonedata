@@ -19,7 +19,7 @@ import geopandas as gpd
 import mysql.connector
 
 #establishing the connection
-conn = mysql.connector.connect(user='root', password='Arun@mysql9398', host='127.0.0.1', database="phonepe_pulse")
+conn = mysql.connector.connect(user='root', password='1234', host='127.0.0.1', database="phonepe_pulse")
 
 # create a cursor object
 cursor = conn.cursor()
@@ -267,7 +267,7 @@ if SELECT == "Explore Data":
         st.markdown("## :violet[Overall State Data - User App opening frequency]")
         cursor.execute(f"select state, sum(RegisteredUser) as Total_Users, sum(AppOpens) as Total_Appopens from map_user where year = {Year} and quarter = {Quarter} group by state order by state")
         df1 = pd.DataFrame(cursor.fetchall(), columns=['State', 'Total_Users','Total_Appopens'])
-        df2 = pd.read_csv(r"C:\\Users\\arunk\\OneDrive\\Desktop\\Statenames.csv")
+        df2 = pd.read_csv(r"C:\\Users\\icharukesh\\OneDrive\\Desktop\\Statenames.csv")
         df1.Total_Appopens = df1.Total_Appopens.astype(float)
         df1.State = df2
         
@@ -315,8 +315,8 @@ if SELECT == "About":
         st.title("THE BEAT OF PHONEPE")
         st.write("---")
         st.subheader("Phonepe became a leading digital payments company")
-        st.image(Image.open("C:\\Users\\arunk\\OneDrive\\Desktop\\about_phonepe.jpg"),width = 400)
-        with open("C:\\Users\\arunk\\OneDrive\\Desktop\\about_phonepe1.png","rb") as f:
+        st.image(Image.open("C:\\Users\\icharukesh\\OneDrive\\Desktop\\about_phonepe.jpg"),width = 400)
+        with open("C:\\Users\\icharukesh\\OneDrive\\Desktop\\about_phonepe1.png","rb") as f:
             data = f.read()
         st.download_button("DOWNLOAD REPORT",data,file_name="annual report.pdf")
     with col2:
@@ -338,7 +338,7 @@ if SELECT == "Contact":
         "LINKEDIN": "https://www.linkedin.com/in/icharkesh-434864196/"}
     
     col1, col2, col3 = st.columns(3)
-    col3.image(Image.open("C:\\Users\\arunk\\OneDrive\\Desktop\\icharukesh.png.jpg"), width=300)
+    col3.image(Image.open("C:\\Users\\icharukesh\\OneDrive\\Desktop\\icharukesh.png.jpg"), width=300)
     st.subheader(Name)
     st.subheader(mail)
     with col2:
